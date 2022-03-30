@@ -13,6 +13,10 @@ class HomeVC: UIViewController {
         super.init(nibName: nil, bundle: nil)  
     }
     
+    override func loadView() {
+        self.view = homeView
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
