@@ -21,7 +21,7 @@ class HomeView: UIView {
     }
     
     private func setupView() {
-        
+        backgroundColor = .blue
     }
     
     private func addSubviews() {
