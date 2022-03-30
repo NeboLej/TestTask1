@@ -17,6 +17,9 @@
 		FAD8CDF127F454DC004D6B51 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDF027F454DC004D6B51 /* HomeVM.swift */; };
 		FAD8CDF427F455B4004D6B51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDF327F455B4004D6B51 /* NetworkService.swift */; };
 		FAD8CDF627F45B1F004D6B51 /* AlcoholModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDF527F45B1F004D6B51 /* AlcoholModel.swift */; };
+		FAD8CDF827F4645B004D6B51 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDF727F4645B004D6B51 /* HomeVC+Extension.swift */; };
+		FAD8CDFA27F46553004D6B51 /* TagCloudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDF927F46553004D6B51 /* TagCloudCell.swift */; };
+		FAD8CDFD27F4823F004D6B51 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8CDFC27F4823F004D6B51 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		FAD8CDF027F454DC004D6B51 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		FAD8CDF327F455B4004D6B51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FAD8CDF527F45B1F004D6B51 /* AlcoholModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholModel.swift; sourceTree = "<group>"; };
+		FAD8CDF727F4645B004D6B51 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
+		FAD8CDF927F46553004D6B51 /* TagCloudCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCloudCell.swift; sourceTree = "<group>"; };
+		FAD8CDFC27F4823F004D6B51 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		FFABFF05DF451E011226062A /* Pods_TestTask1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTask1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,7 +105,9 @@
 		FA4E90CC27F44F4700D60C5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAD8CDFB27F48231004D6B51 /* Utils */,
 				FA4E90D127F44FEE00D60C5B /* HomeView.swift */,
+				FAD8CDF927F46553004D6B51 /* TagCloudCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4E90CF27F44FB700D60C5B /* HomeVC.swift */,
+				FAD8CDF727F4645B004D6B51 /* HomeVC+Extension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +155,14 @@
 				FAD8CDF327F455B4004D6B51 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FAD8CDFB27F48231004D6B51 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAD8CDFC27F4823F004D6B51 /* LeftAlignedCollectionViewFlowLayout.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +282,12 @@
 				FA4E90D027F44FB700D60C5B /* HomeVC.swift in Sources */,
 				FAD8CDF127F454DC004D6B51 /* HomeVM.swift in Sources */,
 				FA4E90D227F44FEE00D60C5B /* HomeView.swift in Sources */,
+				FAD8CDF827F4645B004D6B51 /* HomeVC+Extension.swift in Sources */,
 				FA4E90B927F44ED100D60C5B /* AppDelegate.swift in Sources */,
+				FAD8CDFA27F46553004D6B51 /* TagCloudCell.swift in Sources */,
 				FAD8CDF427F455B4004D6B51 /* NetworkService.swift in Sources */,
 				FAD8CDF627F45B1F004D6B51 /* AlcoholModel.swift in Sources */,
+				FAD8CDFD27F4823F004D6B51 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				FA4E90BB27F44ED100D60C5B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
