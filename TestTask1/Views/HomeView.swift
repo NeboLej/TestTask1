@@ -28,6 +28,7 @@ class HomeView: UIView {
         textField.placeholder = "Coctail name"
         textField.textAlignment = .center
         textField.layer.shadowOpacity = 0.4
+        textField.tintColor = .black
         textField.layer.shadowOffset = CGSize(width: 0, height: 2)
         return textField
     }()

@@ -16,7 +16,6 @@ class HomeVC: UIViewController {
     private let viewModel: HomeVM
     private(set) var arrayAlcohols: [AlcoholModel] = [] {
         didSet {
-            //            print(arrayAlcohols.count)
             homeView.tagCloudCollectionView.reloadData()
         }
     }
@@ -27,6 +26,8 @@ class HomeVC: UIViewController {
             }
         }
     }
+    
+    private(set) var activeIndex: Set<Int> = []
     
     override func loadView() {
         self.view = homeView
@@ -51,6 +52,7 @@ class HomeVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     @objc func dismissKeyboard() {
         homeView.endEditing(true)
     }
@@ -64,6 +66,16 @@ class HomeVC: UIViewController {
 
     @objc func keyboardWillHide(notification: NSNotification) {
         animateTextField(state: .hide)
+    }
+    
+    func serchTags(sting: String) {
+        activeIndex = []
+        for (index, item) in arrayAlcohols.enumerated() {
+            if item.strDrink.contains(sting) {
+                activeIndex.insert(index)
+            }
+        }
+        homeView.tagCloudCollectionView.reloadData()
     }
     
     private func animateTextField(state: KeyboardState) {

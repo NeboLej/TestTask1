@@ -16,13 +16,13 @@ class TagCloudCell: UICollectionViewCell {
     
     lazy var gradientLayer: CAGradientLayer = {
         let layer = CAGradientLayer()
-        layer.frame = self.bounds
         layer.cornerRadius = self.layer.cornerRadius
         
         layer.colors = [UIColor(displayP3Red: 254/255, green: 83/255, blue: 99/255, alpha: 1).cgColor,
                         UIColor(displayP3Red: 251/255, green: 86/255, blue: 255/255, alpha: 1).cgColor]
         return layer
     }()
+
     
     var isActive = false {
         willSet {
@@ -35,6 +35,16 @@ class TagCloudCell: UICollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        if isActive {
+            layer.addSublayer(gradientLayer)
+        } else {
+            gradientLayer.removeFromSuperlayer()
+        }
+        addSubview(label)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -44,6 +54,10 @@ class TagCloudCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        gradientLayer.frame = bounds
     }
     
     private func setupView() {
