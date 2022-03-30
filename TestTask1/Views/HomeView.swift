@@ -43,6 +43,11 @@ class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.endEditing(true)
+    }
+    
     private func setupView() {
         backgroundColor = .white
     }
@@ -64,6 +69,5 @@ class HomeView: UIView {
             make.bottom.equalToSuperview().inset(200)
             make.height.equalTo(30)
         }
-        
     }
 }

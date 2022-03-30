@@ -22,3 +22,9 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
 }
+
+extension HomeVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        animateTextField()
+    }
+}
