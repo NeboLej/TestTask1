@@ -21,6 +21,17 @@ class HomeView: UIView {
         return cv
     }()
     
+    lazy var textField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .white
+        textField.layer.cornerRadius = 10
+        textField.placeholder = "Coctail name"
+        textField.textAlignment = .center
+        textField.layer.shadowOpacity = 0.4
+        textField.layer.shadowOffset = CGSize(width: 0, height: 2)
+        return textField
+    }()
+    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -38,6 +49,7 @@ class HomeView: UIView {
     
     private func addSubviews() {
         addSubview(tagCloudCollectionView)
+        addSubview(textField)
     }
     
     private func initConstraints() {        
@@ -45,6 +57,12 @@ class HomeView: UIView {
             make.right.left.equalToSuperview().inset(10)
             make.top.equalToSuperview().inset(100)
             make.height.equalTo(300)
+        }
+        
+        textField.snp.makeConstraints { make in
+            make.right.left.equalToSuperview().inset(40)
+            make.bottom.equalToSuperview().inset(200)
+            make.height.equalTo(30)
         }
         
     }
