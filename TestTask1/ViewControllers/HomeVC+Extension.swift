@@ -21,10 +21,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TagCloudCell
+        
+        cell.isActive.toggle()
+    }
+    
 }
 
 extension HomeVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        animateTextField()
     }
 }

@@ -14,6 +14,27 @@ class TagCloudCell: UICollectionViewCell {
         return label
     }()
     
+    lazy var gradientLayer: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.frame = self.bounds
+        layer.cornerRadius = self.layer.cornerRadius
+        
+        layer.colors = [UIColor(displayP3Red: 254/255, green: 83/255, blue: 99/255, alpha: 1).cgColor,
+                        UIColor(displayP3Red: 251/255, green: 86/255, blue: 255/255, alpha: 1).cgColor]
+        return layer
+    }()
+    
+    var isActive = false {
+        willSet {
+            if newValue {
+                layer.addSublayer(gradientLayer)
+            } else {
+                gradientLayer.removeFromSuperlayer()
+            }
+            addSubview(label)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -26,7 +47,7 @@ class TagCloudCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        backgroundColor = .lightGray    
+        backgroundColor = .lightGray
         layer.cornerRadius = 10
     }
     
