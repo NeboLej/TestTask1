@@ -8,10 +8,18 @@ import UIKit
 
 class HomeVC: UIViewController {
     private let homeView = HomeView()
+    private let viewModel: HomeVM
     
-    init() {
-        super.init(nibName: nil, bundle: nil)  
+    init(viewModel: HomeVM) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        
+        viewModel.getAlcohol { str in
+//            print(str)
+        }
     }
+    
+    
     
     override func loadView() {
         self.view = homeView
