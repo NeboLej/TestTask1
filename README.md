@@ -1,5 +1,5 @@
 # TestTask1
-Test task for layout using snapkit. Alamofire is used to get the tag cloud
+Test task for layout using SnapKit. Alamofire is used to get the tag cloud
 
 <a href="url"><img src="https://user-images.githubusercontent.com/80099010/160905306-bacbe796-a13d-479c-85dd-75d8d1e6ea0a.gif" align="left" height="500" width="240" ></a>
 
